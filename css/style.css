@@ -1,0 +1,91 @@
+body {
+    background: rgba(28, 35, 49, 0.95);
+    /*background: rgba(211, 211, 211, 0.95);*/
+}
+
+
+/*p.About {
+      display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}*/
+
+#About {
+    text-align: -webkit-center;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    margin: 50px auto;
+    padding: 10%;
+    font-size: 18px;
+}
+
+#Schedule {
+    background: rgba(28, 35, 49, 1);
+    margin: 100px auto;
+    padding: 10%;
+}
+
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+    background-color: #F8A21F;
+}
+
+#Tickets {
+    text-align: -webkit-center;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    /*margin-bottom: 5px;*/
+    padding-bottom: 5%;
+    padding-top: 5%;
+    font-size: 18px;
+    /*background: rgba(28, 35, 49, 1);*/
+}
+
+#Speakers {
+    text-align: -webkit-center;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    margin-bottom: 5px;
+    padding-bottom: 10%;
+    /*padding-top: 10%;*/
+    font-size: 18px;
+    background: rgba(28, 35, 49, 1);
+}
+
+#Sponsors {
+    text-align: -webkit-center;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    margin-bottom: 5px;
+    padding-bottom: 10%;
+    /*padding-top: 10%;*/
+    font-size: 18px;
+    background: rgba(28, 35, 49, 1);
+}
+
+.flex {
+    text-align: -webkit-center;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    margin-bottom: 5%;
+    padding: 0%;
+    background: repeating-linear-gradient( 45deg, #F8A21F, #F8A21F 3px, #F0B310 3px, #F0B310 4px);
+    color: white;
+}
