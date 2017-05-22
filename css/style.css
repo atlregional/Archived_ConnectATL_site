@@ -89,3 +89,4 @@ body {
     background: repeating-linear-gradient( 45deg, #F8A21F, #F8A21F 3px, #F0B310 3px, #F0B310 4px);
     color: white;
 }
+#map { position:absolute; top:0; bottom:0; width:100%; }
