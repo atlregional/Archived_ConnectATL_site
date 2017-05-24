@@ -12,7 +12,15 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
+    <!--Local Styles Sheet-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/about.scss">
+    <!--/Local Styles Sheet-->
+    <!--Map CDN-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+    <!--/Map CDN-->
+
     <!-- Template styles -->
     <style rel="stylesheet">
     /* TEMPLATE STYLES */
@@ -55,7 +63,7 @@
     }
 
     .view {
-        background: url("img/Atlanta_arches.png")no-repeat center center fixed;
+        background: url("img/Atlanta_arches.png") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -85,6 +93,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#Schedule">Schedule</a>
                     </li>
+                   <!--  <li class="nav-item">
+                        <a class="nav-link" href="#Program">Program</a>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#Tickets">Tickets</a>
                     </li>
@@ -114,12 +125,43 @@
     <!--About-->
     <div id="About">
         <div class="flex-center">
+           <svg viewBox="0 20 600 200">
+
+            <!-- Symbol -->
+              <symbol id="s-text">
+                <text text-anchor="middle"
+                      x="50%" y="50%" dy=".35em">
+                          ABOUT
+                </text>
+              </symbol>
+
+              <!-- Duplicate symbols -->
+              <use xlink:href="#s-text" class="text"
+                   ></use>
+              <use xlink:href="#s-text" class="text"
+                   ></use>
+              <use xlink:href="#s-text" class="text"
+                   ></use>
+              <use xlink:href="#s-text" class="text"
+                   ></use>
+              <use xlink:href="#s-text" class="text"
+                   ></use>
+
+            </svg>
+
+            <br></br>
+        </div>
+        <div class="flex-center">
             <h3>
-                The Atlanta region is taking active steps to plan for the rapid advancements in transportation technology.
-                <br>
-                </br>
+            The Atlanta region is taking active steps to plan for the rapid advancements in transportation technology.
+                </h3>
+                <p>
+                </p></div>
+                <div class="flex-center">
+                <h3>
                 Join us for the ConnectATL Summit to learn from industry leaders about the opportunities and challenges to come from the rapid advancements in transportation technology. Industry leaders, join to learn from local governments precisely how to implement your product faster and smarter.
             </h3>
+            </div>
         </div>
     </div>
     <!--/.About-->
@@ -192,6 +234,20 @@
         </div>
     </div>
     <!--/Schedule-->
+
+    <!--Program-->
+ <!--  <div id="Program">
+    <div class="flex">
+            <h1>
+            PROGRAM
+            </h1>
+        </div>
+        <div class="flex-center">
+            <img class="ARCNodes" src="img/svg/ARC_Nodes.svg" >
+        </div>
+    </div> -->
+
+    <!--/Program-->
     <!--Tickets-->
     <div id="Tickets">
         <div class="flex-center">
@@ -234,42 +290,52 @@
                 <a href="mailto:lcaceda@atlantaregional.com?Subject=Sponsor Interest" target="_top" rel="nofollow" style="color:#F0B310">Send Us An Email</a>
             </h4>
         </div>
-    </div>
+</div>
 <!--/Sponsors-->
 
-<!--Map-->
+<!--Location-->
 
-<!--/Map-->
+<div id="Location">
+ <div class="flex">
+            <h1>
+            SUMMIT LOCATION
+            </h1>
+        </div>
+<div id="map_details">
+    <p><a href="http://www.gatechhotel.com/" style="color: #F0B310">Georgia Tech Hotel + Conference Center</a></p>
+    <p>800 Spring St NW, Atlanta, GA 30308</p>
+    <!-- <p><a href="https://www.google.com/maps/dir/''/georgia+hotel+and+conference+center/data=!4m5!4m4!1m0!1m2!1m1!1s0x88f504668dbafc53:0xac760b611b8971d2?sa=X&ved=0ahUKEwjcsqjtuInUAhWFSyYKHQcaBTcQ9RcIqAEwCw">Directions</a></p> -->
+    <p>September 22, 2017</p>
+    <p>9:00 am - 6:00 pm</p>
+</div>
+<object type="text/html" data="map.html" position="absolute" width="100%" height="400 px" ">
+</object>
+
+</div>
+
+
+
+<!--/Location-->
     <!--Footer-->
-    <footer class="page-footer center-on-small-only">
+    <footer class="page-footer center-on-small-only" id="Footer">
         <!--Footer Links-->
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <!--First column-->
-                <div class="col-md-3 offset-lg-1 hidden-lg-down">ORGANIZED BY</h5>
-                    <br></br>
-                    <p> <img src="img/ARC_Logo_Gold.png" style="width: 50%; height: 50%"> </p>
+                <div class="col">
+                <h5>ORGANIZED BY</h5>
+                    <p></p>
+                    <p> <img src="img/ARC_Logo_Gold.png" style="width: 10%; height: 10%"> </p>
                     <p><a href="http://www.atlantaregional.org">www.atlantregional.org</p>
                 </div>
                 <!--/.First column-->
 
-                <hr class="hidden-md-up">
+                <!-- <hr class="hidden-md-up"> -->
 
             </div>
         </div>
         <!--/.Footer Links-->
-        <hr>
-        <!--Call to action-->
-        <!--        <div class="call-to-action">
-            <h4>Material Design for Bootstrap</h4>
-            <ul>
-                <li>
-                    <h5>Get our UI KIT for free</h5></li>
-                <li><a target="_blank" href="http://mdbootstrap.com/getting-started/" class="btn btn-danger" rel="nofollow">Sign up!</a></li>
-                <li><a target="_blank" href="http://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default" rel="nofollow">Learn more</a></li>
-            </ul>
-        </div> -->
-        <!--/.Call to action-->
+
         <!--Copyright-->
         <div class="footer-copyright">
             <div class="container-fluid" style="font-size: 10px">

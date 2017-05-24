@@ -3,7 +3,6 @@ body {
     /*background: rgba(211, 211, 211, 0.95);*/
 }
 
-
 /*p.About {
       display: block;
     -webkit-margin-before: 1em;
@@ -22,6 +21,7 @@ body {
     margin: 50px auto;
     padding: 10%;
     font-size: 18px;
+    background-image: url(img/svg/ARC_Node.svg);
 }
 
 #Schedule {
@@ -30,6 +30,23 @@ body {
     padding: 10%;
 }
 
+#Program {
+    text-align: -webkit-center;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    margin-bottom: 5px;
+    padding-bottom: 10%;
+    /*padding-top: 10%;*/
+    font-size: 18px;
+    background: rgba(28, 35, 49, 1);
+}
+
+#ARCNodes {
+    margin-left: 0px;
+}
 .table-hover tbody tr:hover td,
 .table-hover tbody tr:hover th {
     background-color: #F8A21F;
@@ -86,7 +103,107 @@ body {
     -webkit-margin-end: 0px;
     margin-bottom: 5%;
     padding: 0%;
-    background: repeating-linear-gradient( 45deg, #F8A21F, #F8A21F 3px, #F0B310 3px, #F0B310 4px);
+    background: repeating-linear-gradient( 45deg, #F8A21F, #F8A21F 3px, #F0B310 5px, #F0B310 6px);
     color: white;
 }
-#map { position:absolute; top:0; bottom:0; width:100%; }
+#Location {
+    text-align: -webkit-center;
+    display: block;
+    min-height: 400px;
+    width: 100%;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    margin-bottom: 5px;
+    padding-bottom: 5%;
+    /*padding-top: 10%;*/
+    font-size: 18px;
+    background: rgba(28, 35, 49, 1);
+}
+#map {
+    position: relative;
+    width:100%;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+}
+#map_details {
+    z-index: 5;
+    position: relative;
+    height: 40%;
+    width: 40%;
+    color: white
+}
+
+#Footer {
+    text-align: center;
+    background: rgba(78, 78, 81, 0.8);
+    padding-bottom: 0px;
+}
+
+#footer-copyright {
+    padding-bottom: 0px;
+}
+
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+
+.text {
+  fill: none;
+  stroke-width: 1;
+  font-size: 60px;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 10s infinite linear;
+  animation: stroke 10s infinite linear;
+}
+
+.text:nth-child(5n + 1) {
+  stroke: #1A5276;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.text:nth-child(5n + 2) {
+  stroke: #2471A3;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+
+.text:nth-child(5n + 3) {
+  stroke: #2E86C1;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+
+.text:nth-child(5n + 4) {
+  stroke: #5DADE2;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+
+.text:nth-child(5n + 5) {
+  stroke: #3AA1BF;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+h3 {
+    padding: 2%;
+}
