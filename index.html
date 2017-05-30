@@ -12,6 +12,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- W3 schools stylesheet -->
+
     <!--Local Styles Sheet-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -20,7 +22,10 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
     <!--/Map CDN-->
-
+     <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/noframework.waypoints.min.js"></script>
+    <!-- <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints.min.js"></script> -->
     <!-- Template styles -->
     <style rel="stylesheet">
     /* TEMPLATE STYLES */
@@ -34,8 +39,24 @@
 
     .navbar {
         background-color: transparent;
+        margin-bottom: 0px;
     }
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+        background-color: rgba(244,169,24,0.9)
+    }
+    .nav-tabs .nav-link {
+        border: 0px;
+    }
+     .affix {
+      top:0;
+      width: 100%;
+      z-index: 9999 !important;
+      }
 
+      .affix ~ .container {
+         position: relative;
+         top: 50px;
+      }
     .scrolling-navbar {
         -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
@@ -72,9 +93,9 @@
     </style>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar">
     <!--Navbar-->
-    <nav class="navbar navbar-toggleable-md navbar-dark fixed-top scrolling-navbar">
+    <nav class="navbar navbar-toggleable-md navbar-dark fixed-top scrolling-navbar" data-spy="affix" data-offset-top="197">
         <div class="container">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -82,10 +103,10 @@
             <a class="navbar-brand" href="#">
                 <strong>ConnectATL 2017</strong>
             </a>
-            <div class="collapse navbar-collapse" id="navbarNav1">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#"">Home <span class="sr-only">(current)</span></a>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav nav-tabs mr-auto" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#About">About</a>
@@ -93,9 +114,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#Schedule">Schedule</a>
                     </li>
-                   <!--  <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="#Program">Program</a>
-                    </li> -->
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#Tickets">Tickets</a>
                     </li>
@@ -123,7 +144,7 @@
     </div>
     <!--/.Mask-->
     <!--About-->
-    <div id="About">
+    <div id="About" class="container">
         <div class="flex-center">
            <svg viewBox="0 20 600 200">
 
@@ -165,8 +186,36 @@
         </div>
     </div>
     <!--/.About-->
+    <!--Location-->
+            <div id="Location" class="container">
+            <div class="flex">
+            </br>
+            <h1>
+             SUMMIT LOCATION
+            </h1>
+        </div>
+            <div id="map_details">
+                <p><a href="http://www.gatechhotel.com/" style="color: #F0B310">Georgia Tech Hotel + Conference Center</a></p>
+                <p>800 Spring St NW, Atlanta, GA 30308</p>
+                <!-- <p><a href="https://www.google.com/maps/dir/''/georgia+hotel+and+conference+center/data=!4m5!4m4!1m0!1m2!1m1!1s0x88f504668dbafc53:0xac760b611b8971d2?sa=X&ved=0ahUKEwjcsqjtuInUAhWFSyYKHQcaBTcQ9RcIqAEwCw">Directions</a></p> -->
+                <p>September 22, 2017</p>
+                <p>9:00 am - 6:00 pm</p>
+            </div>
+            <object type="text/html" data="map.html" position="absolute" width="100%" height="400 px" ">
+            </object>
+
+            </div>
+
+
+<!--/Location-->
     <!--Schedule-->
     <div id="Schedule">
+        <div class="flex">
+            </br>
+            <h1>
+            SCHEDULE
+            </h1>
+        </div>
         <div class="flex-center">
             <div class="table-responsive">
                 <table class="table table-hover">
@@ -200,7 +249,7 @@
                         </tr>
                         <tr>
                             <td>10:05 - 11:20 AM</td>
-                            <td>Visionary Panel</td>
+                            <td>Keynote Panel</td>
                             <td></td>
                         </tr>
                         <tr>
@@ -236,20 +285,41 @@
     <!--/Schedule-->
 
     <!--Program-->
- <!--  <div id="Program">
+  <div id="Program">
     <div class="flex">
+            </br>
             <h1>
-            PROGRAM
+            Program
             </h1>
         </div>
-        <div class="flex-center">
-            <img class="ARCNodes" src="img/svg/ARC_Nodes.svg" >
+        <div id="tracks" class="flex-center row">
+           <strong>The program will consist of two breakout sessions per each of the three tracks listed below.</strong>
         </div>
-    </div> -->
+        <div id="nodes" class="flex-center col-xs-6 .col-lg-4">
+            <object id="svg" type="text/html" data="nodes.html" position="relative"  width="30%" height="400px"></object>
 
-    <!--/Program-->
+            <div class="w3-container flex-center col-xs-12 .col-sm-6 .col-lg-8" id="WCI">
+              <div class="w3-card-4" style="width:100%;">
+                <header class="w3-container" style="background-color:#F36E2A">
+                  <h1>WORLD CLASS INFRASTRUCTURE</h1>
+                </header>
+                </br>
+                <header class="w3-container" style="background-color:#4B9673">
+                  <h1>COMPETITIVE ECONOMY</h1>
+                </header>
+                </br>
+                <header class="w3-container" style="background-color:#14587F">
+                  <h1>HEALTHY LIVABLE COMMUNITIES</h1>
+                </header>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <!--/Program -->
     <!--Tickets-->
     <div id="Tickets">
+        </br>
         <div class="flex-center">
             <br>
             <div style="width:100%; text-align:left;">
@@ -263,6 +333,7 @@
 
 <div id="Speakers">
 <div class="flex">
+            </br>
             <h1>
             SPEAKERS
             </h1>
@@ -279,6 +350,7 @@
 <!--Sponsors-->
 <div id="Sponsors">
         <div class="flex">
+            </br>
             <h1>
             SPONSORSHIP
             </h1>
@@ -293,29 +365,7 @@
 </div>
 <!--/Sponsors-->
 
-<!--Location-->
 
-<div id="Location">
- <div class="flex">
-            <h1>
-            SUMMIT LOCATION
-            </h1>
-        </div>
-<div id="map_details">
-    <p><a href="http://www.gatechhotel.com/" style="color: #F0B310">Georgia Tech Hotel + Conference Center</a></p>
-    <p>800 Spring St NW, Atlanta, GA 30308</p>
-    <!-- <p><a href="https://www.google.com/maps/dir/''/georgia+hotel+and+conference+center/data=!4m5!4m4!1m0!1m2!1m1!1s0x88f504668dbafc53:0xac760b611b8971d2?sa=X&ved=0ahUKEwjcsqjtuInUAhWFSyYKHQcaBTcQ9RcIqAEwCw">Directions</a></p> -->
-    <p>September 22, 2017</p>
-    <p>9:00 am - 6:00 pm</p>
-</div>
-<object type="text/html" data="map.html" position="absolute" width="100%" height="400 px" ">
-</object>
-
-</div>
-
-
-
-<!--/Location-->
     <!--Footer-->
     <footer class="page-footer center-on-small-only" id="Footer">
         <!--Footer Links-->
@@ -346,14 +396,19 @@
     </footer>
     <!--/.Footer-->
     <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="js/tether.min.js"></script>
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!--SVG js-->
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <!--Felxbox-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.css"></script>
+    <!-- w3 school script for cards -->
+     <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+
 </body>
 
 </html>
