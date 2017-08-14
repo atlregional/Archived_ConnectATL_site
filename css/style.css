@@ -2,8 +2,43 @@ body {
     background: rgba(28, 35, 49, 0.95);
     font-family: 'Roboto', sans-serif;
     position: relative;
+    color: white;
+}
+h1 {
+  color: white;
+}
+img {
+  margin-right: 50px;
+  margin-left: 50px;
+}
+#container {
+  /*display: flex;*/
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1px;
 }
 
+#container > div {
+  /*border: 1px solid #555;*/
+  /*flex: 0 0 200px;*/
+  /*background-color: #ccc;*/
+  /*width: 200px;*/
+  margin: 2px;
+ /* font-size: 50px;
+  line-height:200px;*/
+  text-align: center;
+}
+h6 {
+    background: rgba(39,46,59, 0.95);
+    color: white;
+    font-style: italic;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: x-large;
+}
+object {
+  margin-top: 40px;
+}
 #About {
     text-align: -webkit-center;
     display: block;
@@ -17,14 +52,14 @@ body {
     /*background-image: url(img/svg/ARC_Node.svg);*/
 }
 
-#Schedule {
+/*#Schedule {
     background: rgba(28, 35, 49, 1);
     margin: 100px auto;
     padding: 2%;
-}
+}*/
 
 #Program {
-    text-align: -webkit-center;
+  text-align: -webkit-center;
     display: block;
     /*display: flex;*/
    /* display: -webkit-flex;
@@ -40,7 +75,7 @@ body {
     font-size: 18px;
     background: rgba(28, 35, 49, 1);
     padding: 2%;
-    /*background-image: url('img/ConnectATL_Chip-04.png');*/
+    color: white;
 }
 
 
@@ -101,18 +136,19 @@ body {
 }
 
 #Sponsors {
-    text-align: -webkit-center;
-    display: block;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    margin-bottom: 5px;
-    padding-bottom: 10%;
-    /*padding-top: 10%;*/
-    font-size: 18px;
-    background: rgba(28, 35, 49, 1);
-    padding: 2%;
+  text-align: -webkit-center;
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  margin-bottom: 5px;
+  padding-bottom: 10%;
+  /*padding-top: 10%;*/
+  font-size: 18px;
+  background: rgba(28, 35, 49, 1);
+  padding: 2%;
+
 }
 
 .flex {
@@ -125,7 +161,6 @@ body {
     margin-bottom: 5%;
     padding: 0%;
     background: repeating-linear-gradient( 45deg, #F8A21F, #F8A21F 3px, #F0B310 5px, #F0B310 6px);
-    color: white;
 }
 #Location {
     text-align: -webkit-center;
@@ -228,4 +263,6 @@ svg {
 h3 {
     padding: 2%;
 }
+
+
 
