@@ -7,6 +7,7 @@ body {
 h1 {
   color: white;
 }
+
 img {
   margin-right: 50px;
   margin-left: 50px;
@@ -17,7 +18,38 @@ img {
   flex-wrap: wrap;
   padding: 1px;
 }
-
+.ch-item {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  cursor: default;
+  perspective: 900px;
+}
+.ch-info{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.ch-info > div {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-position: center center;
+  transition: all 0.4s linear;
+  transform-origin: 50% 0%;
+}
+.ch-info .ch-info-front {
+  box-shadow: inset 0 0 0 16px rgba(0,0,0,0.3);
+}
+.ch-info .ch-info-back {
+  transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+  background: #000;
+  opacity: 0;
+}
 #container > div {
   /*border: 1px solid #555;*/
   /*flex: 0 0 200px;*/
